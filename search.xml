@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>通过电报BOT复制GoogleDrive资源</title>
+      <link href="/posts/3dc8165e/"/>
+      <url>/posts/3dc8165e/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>项目地址:   </p><p><code>https://github.com/fxxkrlab/iCopy</code> </p><p>###安装###</p><p>1.Python 3.6+</p><p>2.Pre-install screen</p><p>3.Pre-install 并且配置gclone</p><p>Linux直接使用下面命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget -qO- https:&#x2F;&#x2F;git.io&#x2F;gclone.sh)</span><br></pre></td></tr></table></figure><p>4.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;fxxkrlab&#x2F;iCopy.git &amp;&amp; cd iCopy</span><br></pre></td></tr></table></figure><p>5.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv .</span><br></pre></td></tr></table></figure><p>6.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. .&#x2F;bin&#x2F;activate</span><br></pre></td></tr></table></figure><p>7.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure><p>8.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp settings.py.example settings.py</span><br></pre></td></tr></table></figure><p>9.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Edit settings.py</span><br></pre></td></tr></table></figure><blockquote><p>settings.py 修改说明</p></blockquote><p>TOKEN：# 由BotFather生成的Bot API令牌</p><p>ENABLED_USERS：# 您的电报用户ID, <code>@userinfobot</code> 可以直接查询到</p><p>Remote：# 配置gclone时用的名字,例如“ gc”</p><p>Pre_Dst_id：# 存储的目录ID。</p><p>sa_path：# service_accounts.json所在的目录。结尾不带斜线“ /”。例如 <code>/root/AutoRclone/accounts</code> 注意：路径中不支持“〜”。</p><blockquote><p>启动iCopy BOT：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -u iCopy.py</span><br></pre></td></tr></table></figure><blockquote><p>Start via screen:</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -dmS iCopy &#96;which python3&#96; -u iCopy.py</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Telegram </tag>
+            
+            <tag> GoogleDrive </tag>
+            
+            <tag> Bot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>rclone挂载GoogleDrive团队盘</title>
       <link href="/posts/98a38446/"/>
       <url>/posts/98a38446/</url>
@@ -14,11 +37,11 @@
       
         <tags>
             
+            <tag> GoogleDrive </tag>
+            
             <tag> gdrive </tag>
             
             <tag> rclone </tag>
-            
-            <tag> GoogleDrive </tag>
             
         </tags>
       
