@@ -58,9 +58,9 @@
       
         <tags>
             
-            <tag> Telegram </tag>
-            
             <tag> GoogleDrive </tag>
+            
+            <tag> Telegram </tag>
             
             <tag> Bot </tag>
             
@@ -81,11 +81,11 @@
       
         <tags>
             
-            <tag> GoogleDrive </tag>
-            
             <tag> gdrive </tag>
             
             <tag> rclone </tag>
+            
+            <tag> GoogleDrive </tag>
             
         </tags>
       
