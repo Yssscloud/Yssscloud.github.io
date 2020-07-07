@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>设置ssh无密码登录linux服务器的方法</title>
+      <link href="/posts/3gc8225e.html"/>
+      <url>/posts/3gc8225e.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>每次登录测试服务器，ssh登录总是需要输入密码。登录的少还行，登录的多了，多一行命令都是多余的。</p></blockquote><h3 id="rsa认证登录方式-制作密钥对"><a href="#rsa认证登录方式-制作密钥对" class="headerlink" title="rsa认证登录方式,制作密钥对"></a>rsa认证登录方式,制作密钥对</h3><p>在客户端(本地机器)终端下输入以下命令:</p><p> <code>ssh-keygen -t [rsa|dsa]</code> </p><p>rsa和dsa代表不同的算法</p><p>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure><p>一直回车（不用设置密码）</p><p>将会生成密钥文件和私钥文件 </p><p><code>id_rsa,id_rsa.pub</code> </p><p>生成位置在 <code>/root/.ssh/</code> 文件夹下（我用的<br>是root用户所以在root下，生成过程会有提示<br>文件位置）</p><p>.ssh 是隐藏文件夹 使用  <code>ls -a</code> 查看过或用如下命令直接读取:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure><blockquote><p>将公钥放到服务器指定位置</p></blockquote><h3 id="方法一、"><a href="#方法一、" class="headerlink" title="方法一、"></a>方法一、</h3><p>直接复制</p><p>1、将公钥复制到服务器的root用户下的.ssh文件夹（用哪个用户登录就复制到哪个用户下的.ssh文件夹下）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp &#x2F;root&#x2F;.ssh&#x2F;id_rsa.pub root@10.0.0.1:&#x2F;root&#x2F;.ssh&#x2F;</span><br></pre></td></tr></table></figure><p>2、安装公钥.</p><p>  登录到服务器  <code>cd /root/.ssh/</code> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub &gt;&gt; authorized_keys</span><br></pre></td></tr></table></figure><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h3><p>使用 <code>ssh-copy-id</code> 命令，如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id root@10.0.0.1</span><br></pre></td></tr></table></figure><h3 id="验证"><a href="#验证" class="headerlink" title="验证:"></a>验证:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@10.0.0.1</span><br></pre></td></tr></table></figure><p>不用输入密码则成功，否则失败.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> ssh </tag>
+            
+            <tag> vps </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于Go的Telegram RSS Bot机器人flowerss bot</title>
       <link href="/posts/3dc8265e.html"/>
       <url>/posts/3dc8265e.html</url>
